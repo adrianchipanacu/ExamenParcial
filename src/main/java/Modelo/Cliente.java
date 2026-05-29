@@ -1,35 +1,46 @@
-/*
- * Click nbfs://nbhost/SystemFileSystem/Templates/Licenses/license-default.txt to change this license
- * Click nbfs://nbhost/SystemFileSystem/Templates/Classes/Class.java to edit this template
- */
 package Modelo;
-import java.util.Date;
+import java.util.ArrayList;
+import java.util.List;
 
 /**
  *
  * @author adrian_pc
  */
 public class Cliente {
-    
-    private String nombres;
-    private String dni;
-    private String correo;
-    private Date fechaNacimiento;
 
-    public Cliente(String nombres, String dni, String correo, Date fechaNacimiento) {
-        this.nombres = nombres;
-        this.dni = dni;
-        this.correo = correo;
-        this.fechaNacimiento = fechaNacimiento;
+    private String RUC;
+    private String razonSocial;
+    private String email;
+    private String contacto;
+    private String telefono;
+    private String clave;
+    private List<Oferta> ofertas;
+
+    public Cliente(String RUC, String razonSocial, String email, String contacto, String telefono, String clave) {
+        this.RUC = RUC;
+        this.razonSocial = razonSocial;
+        this.email = email;
+        this.contacto = contacto;
+        this.telefono = telefono;
+        this.clave = clave;
+        this.ofertas = new ArrayList<>();
     }
 
-    // Getters
-    public String getNombres() { return nombres; }
-    public String getDni() { return dni; }
-    public String getCorreo() { return correo; }
-    public Date getFechaNacimiento() { return fechaNacimiento; }
+    public String getRUC() { return RUC; }
+    public String getRazonSocial() { return razonSocial; }
+    public String getEmail() { return email; }
+    public String getContacto() { return contacto; }
+    public String getTelefono() { return telefono; }
 
-    public boolean registrar() { return false; }
-    public boolean login(String correo, String pass) { return false; }
-    
+    public boolean agregarOferta(Oferta oferta) {
+        return ofertas.add(oferta);
+    }
+
+    public boolean eliminarOferta(Oferta oferta) {
+        return ofertas.remove(oferta);
+    }
+
+    public Oferta[] getOfertas() {
+        return ofertas.toArray(new Oferta[0]);
+    }
 }
