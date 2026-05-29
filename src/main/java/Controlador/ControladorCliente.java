@@ -7,6 +7,11 @@ import java.util.ArrayList;
 import javax.swing.JOptionPane;
 import javax.swing.table.DefaultTableModel;
 
+/**
+ *
+ * @author adrian_pc
+ */
+
 public class ControladorCliente implements ActionListener {
     private VistaCliente vista;
     private ArrayList<Cliente> clientes;

@@ -1,5 +1,8 @@
-    package Vista;
-
+package Vista;
+/**
+ *
+ * @author adrian_pc
+ */
 import javax.swing.*;
 import javax.swing.table.DefaultTableModel;
 

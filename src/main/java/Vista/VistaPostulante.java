@@ -2,7 +2,7 @@ package Vista;
 
 /**
  *
- * @author usuario
+ * @author adrian_pc
  */
 public class VistaPostulante extends javax.swing.JFrame {
 
