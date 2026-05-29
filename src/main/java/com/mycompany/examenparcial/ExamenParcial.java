@@ -1,16 +1,13 @@
-/*
- * Click nbfs://nbhost/SystemFileSystem/Templates/Licenses/license-default.txt to change this license
- */
-
 package com.mycompany.examenparcial;
 
-/**
- *
- * @author adrian_pc
- */
+import Controlador.ControladorCliente;
+import Vista.VistaCliente;
+
 public class ExamenParcial {
 
     public static void main(String[] args) {
-        System.out.println("Hello World!");
+        VistaCliente vista = new VistaCliente();
+        new ControladorCliente(vista);
+        vista.setVisible(true);
     }
 }
